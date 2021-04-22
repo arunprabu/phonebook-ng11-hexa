@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
     <footer class="text-center">
       <hr>
       <app-menu></app-menu>
-      <p>Copyright 2021 - Arun</p>
+      <p class="greyText">Copyright 2021 - Arun</p>
     </footer>
   `,
   styles: [
+    `
+      .greyText{
+        color: grey;
+      }
+    `
   ]
 })
 export class FooterComponent implements OnInit {
