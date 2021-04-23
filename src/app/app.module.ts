@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/components/concepts.component';
 import { ContactsComponent } from './contacts/components/contacts.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
@@ -37,7 +37,8 @@ import { ContactDetailsComponent } from './contacts/components/contact-details/c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule in turn bootstrapped with a comp -- AppComponent
