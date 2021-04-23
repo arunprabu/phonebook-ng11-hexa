@@ -17,6 +17,7 @@ import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 // Main Switching Box
 @NgModule({
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     CebComponent,
     ColorizerDirective,
     AddContactComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,

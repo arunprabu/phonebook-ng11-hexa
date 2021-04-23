@@ -1,1 +1,37 @@
-<p>about works!</p>
+<div class="container">
+  <h1>Pipes | Demo </h1>
+  <pre>
+    Pipes
+    ---
+      Tiny utilities to Transform info from one format to another 
+
+      Built-in pipes 
+      ---
+        lowercase, uppercase, date 
+
+      Custom Pipes are also possible
+      ---
+  </pre>
+
+  <p>{{randomText}}</p>
+  <p>{{randomText | uppercase }}</p>
+  <p>{{randomText | lowercase }}</p>
+
+  <hr>
+  <p>{{today}}</p>
+  <p>{{today | date }}</p>
+  <p>{{today | date: 'dd/MMMM/yyyy hh:mm:ss a' }}</p>  <!-- parameterised pipe -->
+
+  <p>{{today | date: 'dd/MMMM/yyyy hh:mm:ss a' | uppercase }}</p>  <!--chaining pipes -->
+
+  <!-- learn about async pipe -->
+  <hr>
+  <h4>Custom Pipe</h4>
+  <p>ng g p shared/pipes/ellipsis</p>
+  <p>{{randomText}}</p>
+  <p>{{randomText | ellipsis }}</p>
+  <p>{{randomText | ellipsis: 10 }}</p> <!-- param-->
+  <p>{{randomText | ellipsis: 50 }}</p>
+
+
+</div>

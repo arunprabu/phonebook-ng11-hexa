@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  randomText = 'Tiny utilities to Transform info from one format to another';
+
+  today: Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
