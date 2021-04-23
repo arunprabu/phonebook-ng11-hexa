@@ -38,13 +38,13 @@
           placeholder="Enter Email" formControlName="email"
           [ngClass]="{ 'is-invalid': addContactForm.get('email').touched && addContactForm.get('email').invalid }"/>
           <div class="invalid-feedback">
-            <div>Email is required</div>
-            <div>Email seems to be not valid</div>
+            <div *ngIf="addContactForm.get('email').errors?.required">Email is required</div>
+            <div *ngIf="addContactForm.get('email').errors?.email">Email seems to be not valid</div>
           </div>
         </div>
       </div>
 
-      <div class="alert alert-success">
+      <div class="alert alert-success" *ngIf="isSaved">
         Saved Successfully
       </div>
 

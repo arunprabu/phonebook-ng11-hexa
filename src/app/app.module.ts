@@ -16,6 +16,7 @@ import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Main Switching Box
 @NgModule({
@@ -38,7 +39,8 @@ import { ContactDetailsComponent } from './contacts/components/contact-details/c
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule in turn bootstrapped with a comp -- AppComponent
