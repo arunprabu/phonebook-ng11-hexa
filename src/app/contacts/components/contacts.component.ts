@@ -14,7 +14,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
   contactList: Contact[] = [];
   contactsSubscription: Subscription | any;
 
-  constructor( private contactService: ContactService) {
+  constructor(private contactService: ContactService) {
     console.log('Inside Constructor');
   }
 
@@ -25,7 +25,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
 
     // 1. send the req to the service
     this.contactsSubscription = this.contactService.getContacts()
-      .subscribe( (res: Contact[] ) => { // 2. get the resp from the service
+      .subscribe((res: Contact[]) => { // 2. get the resp from the service
         console.log(res);
         this.contactList = res;
       });
@@ -36,7 +36,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
     // ideal place for us to unsubscribe, remove data, stop interval, remove timeout
     console.log('Inside Destroy');
     this.contactsSubscription.unsubscribe();
-    if(this.contactList && this.contactList.length > 0){
+    if (this.contactList && this.contactList.length > 0) {
       this.contactList.length = 0;
     }
   }

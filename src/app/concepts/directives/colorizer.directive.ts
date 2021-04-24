@@ -13,7 +13,7 @@ export class ColorizerDirective {
     console.log('Inside Constructor');
     console.log(this.elRef.nativeElement);
 
-    let el = this.elRef.nativeElement;
+    const el = this.elRef.nativeElement;
 
     // el.style.backgroundColor = 'red';
 

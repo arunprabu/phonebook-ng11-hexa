@@ -8,16 +8,15 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuComponent } from './shared/components/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/components/concepts.component';
-import { ContactsComponent } from './contacts/components/contacts.component';
 import { AboutComponent } from './about/about.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
-import { AddContactComponent } from './contacts/components/add-contact/add-contact.component';
-import { ContactDetailsComponent } from './contacts/components/contact-details/contact-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
+import { ContactsModule } from './contacts/contacts.module';
+import { ProductsModule } from './products/products.module';
 
 // Main Switching Box
 @NgModule({
@@ -28,21 +27,19 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
     MenuComponent,
     HomeComponent,
     ConceptsComponent,
-    ContactsComponent,
     AboutComponent,
     CpbComponent,
     CebComponent,
     ColorizerDirective,
-    AddContactComponent,
-    ContactDetailsComponent,
     EllipsisPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ContactsModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule in turn bootstrapped with a comp -- AppComponent
